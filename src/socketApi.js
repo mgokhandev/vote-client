@@ -4,7 +4,7 @@ let socket;
 
 export const init = () => {
   console.log("Sunucuya bağlanılıyor");
-  socket = io("http://localhost:3000", {
+  socket = io("process.env.REACT_APP_BACKEND_ENDPOINT", {
     transports: ["websocket"],
   });
   socket.on("connect", () => console.log("Sunucuya bağlanıldı"));
