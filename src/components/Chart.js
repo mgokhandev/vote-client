@@ -3,7 +3,7 @@ import { Bar } from "react-chartjs-2";
 
 const Chart = ({ activeVoteOne, activeVoteTwo }) => {
   const data = {
-    labels: ["Red", "Blue"],
+    labels: ["Team One", "Team Two"],
     datasets: [
       {
         label: "# of Votes",
@@ -28,9 +28,9 @@ const Chart = ({ activeVoteOne, activeVoteTwo }) => {
   };
 
   return (
-    <>
-      <Bar data={data} options={options} />
-    </>
+    <div className="Chart">
+      <Bar data={data} options={options} />{" "}
+    </div>
   );
 };
 
